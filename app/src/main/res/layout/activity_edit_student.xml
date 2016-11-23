@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_clear_black_24dp"
+        android:id="@+id/floatingCancelButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="18dp"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_done_black_24dp"
+        android:id="@+id/floatingSaveButton"
+        android:layout_margin="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/floatingCancelButton"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/EditStyle"
+                android:text="NIM"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                style="@style/EditStyle"
+                android:text="Nama"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                style="@style/EditStyle"
+                android:text="Gender"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                style="@style/EditStyle"
+                android:text="Email"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                style="@style/EditStyle"
+                android:text="Phone"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_nim"
+                android:inputType="number"
+                style="@style/EditStyle" />
+
+            <EditText
+                android:id="@+id/edit_nama"
+                style="@style/EditStyle" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/genderSpinner"
+                style="@style/EditStyle"
+                ></android.support.v7.widget.AppCompatSpinner>
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/EditStyle" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:inputType="number"
+                style="@style/EditStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
